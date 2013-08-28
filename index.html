@@ -97,7 +97,27 @@
       .footer a {
       color: #ccccff;
       }
+      /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+      div.addthis_toolbox {
+      width:180px;
+      margin: 0 auto;
+      }
     </style>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-43577009-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
   </head>
   <body>
 
@@ -191,10 +211,16 @@
             </div>
             <div class="row-fluid">
               <div class="span8 offset2 social">
-		<!-- Social buttons are not included in default Bootstrap. -->
-		<!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-		<button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-		<button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+		<!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+		  <a class="addthis_button_preferred_1"></a>
+		  <a class="addthis_button_preferred_2"></a>
+		  <a class="addthis_button_compact"></a>
+		  <a class="addthis_counter addthis_bubble_style"></a>
+		</div>
+		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-521c489a59da44e9"></script>
+		<!-- AddThis Button END -->
               </div>
             </div>
           </div>
@@ -221,84 +247,96 @@
 	    PushOut is a free service, that also saves the content of your pushouts so you can access old pushed messages, links, and text easily and searchably online, where you'll also see ads that will pay for keeping the service free.  If you never look up old pushouts, you'll never even see an ad.  The purpose of this crowdfunding effort is to finance development of an app for iOS, Android, OSX, and Windows, as well as Chrome and Firefox extensions to upload and push it across those devices with a single tap/click. When the service has users and traction, we'll work on getting it baked into operating systems directly, so instead of rightclicking in your browser and selecting a menu option, you can use a simple keystroke such as Ctrl+Alt+P, or get an option next to "Select All" and "Copy" when you longpress in your phone.			  </p>
 	</div>
 	<div class="span5 asset">
-		    <img class="img-polaroid" alt="iPhone integration" src="http://i.imgur.com/hLJkT9g.png">
+	  <img class="img-polaroid" alt="iPhone integration" src="http://i.imgur.com/hLJkT9g.png">
+	</div>
       </div>
-    </div>
-    
-    <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-    <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
-    <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-    <div class="row-fluid faq">
-      <div class="span10 offset1">
-	<h3>FAQ</h3>
-	<div class="accordion" id="accordion2">
-	  <div class="accordion-group">
-	    <div class="accordion-heading">
-	      <a class="accordion-toggle" data-toggle="collapse"
-		 data-parent="#accordion2" href="#collapseOne">
-		Is it up and running now?
-	      </a>
-	    </div>
-	    <div id="collapseOne" class="accordion-body collapse">
-	      <div class="accordion-inner">
-		Not just yet.  Check back often.
+      
+      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+      <div class="row-fluid faq">
+	<div class="span10 offset1">
+	  <h3>FAQ</h3>
+	  <div class="accordion" id="accordion2">
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseOne">
+		  Is it up and running now?
+		</a>
+	      </div>
+	      <div id="collapseOne" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  Not just yet.  Check back often.
+		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="accordion-group">
-	    <div class="accordion-heading">
-	      <a class="accordion-toggle" data-toggle="collapse"
-		 data-parent="#accordion2" href="#collapseTwo">
-		Will it work on my Phone/Tablet/Laptop/Desktop?
-	      </a>
-	    </div>
-	    <div id="collapseTwo" class="acordion-body collapse">
-	      <div class="accordion-inner">
-		Eventually.  For now it doesn't work on any of them, and it really needs at least two in order to be useful.  Here's the order in which we plan to make it available: 1. As a Chrome extension.  2. As a firefox extension. 3. As an Android App and a FirefoxOS app.  4. As an iPhone & iPad app. 5. As an OSX App. 6. As a Windows app. 7. For Windows mobile (we will cooperate to facilitate the Linux desktop OS and mobile apps that will be up by this point) 8. As a standard menu option within iOS, Android, OSX, and Windows.
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseTwo">
+		  Will it work on my Phone/Tablet/Laptop/Desktop?
+		</a>
+	      </div>
+	      <div id="collapseTwo" class="acordion-body collapse">
+		<div class="accordion-inner">
+		  Eventually.  For now it doesn't work on any of them, and it really needs at least two in order to be useful.  Here's the order in which we plan to make it available: 1. As a Chrome extension.  2. As a firefox extension. 3. As an Android App and a FirefoxOS app.  4. As an iPhone & iPad app. 5. As an OSX App. 6. As a Windows app. 7. For Windows mobile (we will cooperate to facilitate the Linux desktop OS and mobile apps that will be up by this point) 8. As a standard menu option within iOS, Android, OSX, and Windows.
+		</div>
 	      </div>
 	    </div>
+	    <div class="accordion-group">
+              <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseThree">
+                  How will my information be used?!?!
+		</a>
+              </div>
+              <div id="collapseThree" class="acordion-body collapse">
+		<div class="accordion-inner">
+                  The content of each PushOut will be transmitted to every device signed up to that account, and saved with encryption to your account history, so that AND ONLY SO THAT you can access it later if you want to.  If you signed up with another account, advertising information from that account may be used to serve you more relevant advertising while you're going through the history, but your PushOuts will not me mined at all.
+		</div>
+              </div>
+            </div>
+	    <div class="accordion-group">
+              <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+                   data-parent="#accordion2" href="#collapseFour">
+                  How do I know my PushOuts won't be intercepted by police holding radar guns?
+		</a>
+              </div>
+              <div id="collapseFour" class="acordion-body collapse">
+		<div class="accordion-inner">
+                  Each time you add a device, it generates an asymmetric encryption key pair, and sends the public key to our server.  Our server does the same making a key for the device.  Using this secure communication channel, the server sends a uniquie authentication code to the device, so the server can verify each message the device sends, and send the message out to every device that's currently listening (connected to the internet).  The encryption is built on the difficulty of factoring very large numbers that are a product of two primes (it's really no easier for supercomputers than for you).
+		</div>
+              </div>
+            </div>
 	  </div>
-	  <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse"
-                 data-parent="#accordion2" href="#collapseThree">
-                How will my information be used?!?!
-              </a>
-            </div>
-            <div id="collapseThree" class="acordion-body collapse">
-              <div class="accordion-inner">
-                The content of each PushOut will be transmitted to every device signed up to that account, and saved with encryption to your account history, so that AND ONLY SO THAT you can access it later if you want to.  If you signed up with another account, advertising information from that account may be used to serve you more relevant advertising while you're going through the history, but your PushOuts will not me mined at all.
-              </div>
-            </div>
-          </div>
-	  <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse"
-                 data-parent="#accordion2" href="#collapseFour">
-                How do I know my PushOuts won't be intercepted by police holding radar guns?
-              </a>
-            </div>
-            <div id="collapseFour" class="acordion-body collapse">
-              <div class="accordion-inner">
-                Each time you add a device, it generates an asymmetric encryption key pair, and sends the public key to our server.  Our server does the same making a key for the device.  Using this secure communication channel, the server sends a uniquie authentication code to the device, so the server can verify each message the device sends, and send the message out to every device that's currently listening (connected to the internet).  The encryption is built on the difficulty of factoring very large numbers that are a product of two primes (it's really no easier for supercomputers than for you).
-              </div>
-            </div>
-          </div>
+	</div>
+      </div>
+      
+      <!-- To be clean, we put this under a CC By-SA 3.0 license. -->
+      <!-- http://creativecommons.org/licenses/ -->
+      <div class="row-fluid footer">
+	<div class="span12">
+	  <p>This work is licensed under the
+	    <a href="http://creativecommons.org/licenses/by-SA/3.0/">CC By-SA 3.0 </a>
+	    , ommitting the usual slop from the bottom of a page.</p>
 	</div>
       </div>
     </div>
-    
-    <!-- To be clean, we put this under a CC By-SA 3.0 license. -->
-    <!-- http://creativecommons.org/licenses/ -->
-    <div class="row-fluid footer">
-      <div class="span12">
-	<p>This work is licensed under the
-	  <a href="http://creativecommons.org/licenses/by-SA/3.0/">CC By-SA 3.0 </a>
-	  , ommitting the usual slop from the bottom of a page.</p>
-      </div>
-    </div>
-</div>
-</body>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43577009-1', 'ardley-bitstarter-mooc.herokuapp.com');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
 </html>					
 
 
